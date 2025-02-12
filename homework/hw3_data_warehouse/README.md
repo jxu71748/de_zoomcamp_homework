@@ -1,4 +1,4 @@
-# Creating external table referring to gcs path
+# Creating an external table referring to gcs path
 CREATE OR REPLACE EXTERNAL TABLE `data-engineer-zoomcamp-448404.hw3.external_yellow_taxi_2024`
 OPTIONS (
   format = 'PARQUET',
@@ -6,7 +6,7 @@ OPTIONS (
 );
 
 
-# Create a regular/materialized table from external table
+# Create a regular/materialized table from an external table
 CREATE OR REPLACE TABLE data-engineer-zoomcamp-448404.hw3.regular_yellow_taxi_2024 AS
 SELECT * FROM data-engineer-zoomcamp-448404.hw3.external_yellow_taxi_2024;
 
